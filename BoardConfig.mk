@@ -20,9 +20,10 @@ TARGET_NO_KERNEL := false
 # Prebuilt Kernel Components
 TARGET_PREBUILT_DTB := $(LOCAL_PATH)/prebuilt/dtb
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(LOCAL_PATH)/recovery/root/lib/modules/*.ko)
-
-#Kernel idk
 BOARD_KERNEL_IMAGE_NAME := kernel
+
+# Kernel Path
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 # Flash Architecture & Partitions (ADJUSTED FOR VIRTUAL A/B)
 BOARD_FLASH_BLOCK_SIZE := 131072
