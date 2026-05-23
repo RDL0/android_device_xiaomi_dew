@@ -7,7 +7,6 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 := 
 TARGET_USES_64_BIT_BINDER := true
 
-#32/64 Bit Supporter
 TARGET_SUPPORTS_32_BIT_APPS := true
 TARGET_SUPPORTS_64_BIT_APPS := true
 TARGET_IS_64_BIT := true
@@ -19,22 +18,22 @@ TARGET_NO_KERNEL := false
 
 # Prebuilt Kernel Components
 TARGET_PREBUILT_DTB := $(LOCAL_PATH)/prebuilt/dtb
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(LOCAL_PATH)/recovery/root/lib/modules/*.ko)
 BOARD_KERNEL_IMAGE_NAME := kernel
 
-# Kernel Path
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
-
-# Flash Architecture & Partitions (ADJUSTED FOR VIRTUAL A/B)
+# Flash Architecture & Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-# RAMDISK BUILD FLAGS (CRITICAL CHANGES HERE)
+# RAMDISK BUILD FLAGS
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_COPY_RC_TO_RECOVERY := true
 
-# Dynamic Partitions (Virtual A/B Framework)
+# Dynamic Partitions
 BOARD_SUPPORTS_VIRTUAL_AB := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -52,4 +51,3 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 # System As Root & Ramdisk Variables
 TARGET_RECOVERY_DEVICE_DIRS := $(LOCAL_PATH)
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/first_stage_ramdisk/fstab.mt6768
-
