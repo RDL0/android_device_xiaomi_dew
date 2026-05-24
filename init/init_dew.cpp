@@ -61,4 +61,4 @@ void vendor_load_properties() {
         // Absolute fallback rule defaults strictly to the Redmi variant
         model_property_override("dew", "Redmi 15C");
     }
-}}
+}
