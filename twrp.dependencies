@@ -1,8 +1,0 @@
-[
-  {
-    "remote": "github",
-    "repository": "TeamWin/android_device_mediatek_twres-common",
-    "target_path": "device/mediatek/twres-common",
-    "branch": "android-12.1"
-  }
-]

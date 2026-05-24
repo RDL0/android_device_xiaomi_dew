@@ -1,14 +1,12 @@
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/xiaomi/dew/device.mk)
+
+# Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Unified Device Identity
+## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := dew
 PRODUCT_NAME := twrp_dew
-PRODUCT_BRAND := REDMI
+PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := Redmi 15C
 PRODUCT_MANUFACTURER := Xiaomi
-
-# Models
-PRODUCT_MODEL := Redmi 15C / Poco C85
-PRODUCT_RELEASE_NAME := Redmi 15C / Poco C85
-
-# Build Fingerprint Baseline Properties
-PRODUCT_OVERRIDE_PROP_TAGS += test-keys
