@@ -78,6 +78,13 @@ PRODUCT_PACKAGES += \
     create_pl_dev \
     create_pl_dev.recovery
 
+
+# Service Manager Initialize
+PRODUCT_PACKAGES += \
+    plat_service_contexts \
+    vendor_service_contexts \
+    vndservice_contexts
+
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
