@@ -10,9 +10,8 @@ cc_library_shared {
     recovery_available: true,
     srcs: ["BootControl.cpp", "boot_region_control.cpp"],
     
-    cflags: [
-        "-Wno-undefined-inline",
-        "-Idevice/xiaomi/dew/bootctrl",
+    include_dirs: [
+        "device/xiaomi/dew/bootctrl",
     ],
 
     header_libs: ["device_kernel_headers"],
