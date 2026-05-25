@@ -55,8 +55,15 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot-service.default \
-    android.hardware.boot-service.default_recovery
+    android.hardware.boot@1.2-mtkimpl \
+    android.hardware.boot@1.0-impl-1.2-mtkimpl \
+    android.hardware.boot@1.2-mtkimpl.recovery \
+    bootctrl.mt6768
+
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery \
+    android.hardware.boot@1.2-service
 
 # Fastbootd
 TW_INCLUDE_FASTBOOTD := true

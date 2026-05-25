@@ -163,11 +163,14 @@ TW_NO_SCREEN_BLANK := true
 
 # UI
 TW_THEME := portrait_hdpi
-TW_FRAMERATE := 60
+TW_FRAMERATE := 30
 TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS := 50
 TW_CUSTOM_CLOCK_POS := 300
 TW_CUSTOM_BATTERY_POS := 800
+
+# Fix Delay
+RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
 
 # Handle /data/media
 RECOVERY_SDCARD_ON_DATA := true
@@ -186,7 +189,7 @@ TWRP_INCLUDE_LOGCAT := true
 
 TW_LOAD_VENDOR_BOOT_MODULES := true
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
-TW_LOAD_VENDOR_MODULES := "mt6358-accdet.ko xiaomi_touch.ko lct_tp.ko nt36528_spi.ko nt36528_spi.ko ft8057m_spi.ko ft8057_spi.ko icnl9916_spi.ko"
+TW_LOAD_VENDOR_MODULES := "mt6358-accdet.ko xiaomi_touch.ko lct_tp.ko nt36528_spi.ko nt36528_spi.ko ft8057m_spi.ko icnl9916_spi.ko"
 
 TW_RES_PATH := $(DEVICE_PATH)/recovery/root
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(wildcard $(DEVICE_PATH)/recovery/root/lib/modules/*.ko)
