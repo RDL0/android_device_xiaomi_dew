@@ -9,7 +9,11 @@ cc_library_shared {
     vendor: true,
     recovery_available: true,
     srcs: ["BootControl.cpp", "boot_region_control.cpp"],
-    local_include_dirs: ["."],
+    
+	    
+    include_dirs: [
+        "device/xiaomi/dew/bootctrl",
+    ],
 
     header_libs: ["device_kernel_headers"],
 
